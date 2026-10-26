@@ -1,0 +1,41 @@
+{
+  "projectId": "69854545",
+  "functions": {
+    "gemini-translate": {
+      "hasChanged": false,
+      "hash": "07768517230098fe253d4d25f1fcbd02a90b395f831a868fab5c9d6ff52cf81f"
+    },
+    "proxy-video": {
+      "hasChanged": false,
+      "hash": "d1a17ab965fab32390e7f58b68de9a49d782fe039fc242cd05c2ca6baa74b895"
+    },
+    "resolve-stream": {
+      "hasChanged": false,
+      "hash": "f7d0043dac6fb184749d1626ff08386c120f27986c0e45686203598a2b827192"
+    },
+    "stream-api": {
+      "hasChanged": false,
+      "hash": "9f09356b2b20318f9b76757b74f7ea587e9c9918e02cbc1713a787148f70bd4d"
+    },
+    "subtitle-file": {
+      "hasChanged": false,
+      "hash": "47a16a67168f44b26a10801b49f8c799e93b4f43a56266b0aed051cc996e60d7"
+    },
+    "subtitles-api": {
+      "hasChanged": false,
+      "hash": "8366ffbff2599b121960f61c9cc3cab564c0ac53c7f381547fc74c8f1e58dae8"
+    },
+    "translate-synopsis": {
+      "hasChanged": false,
+      "hash": "00ada375c55b680eb0a3256b3070aaea00183435106bfcd9e6b85be445dffc60"
+    },
+    "video-urls-api": {
+      "hasChanged": false,
+      "hash": "cf2d5d2d69a93f1db976dff14392af16a500a9c12389b40c2012adb03e1e7e8a"
+    },
+    "translate-subtitle": {
+      "hasChanged": false,
+      "hash": "553c02edea77fde507630752f32e6600e84f84e6fe603685044a4eb0e90c4fa2"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/nrt-reg');
+@import url('https://fonts.cdnfonts.com/css/nrt-bd1');
+@import url('https://fonts.cdnfonts.com/css/nrt-bd2');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Vazirmatn', sans-serif;
+  --accent-base: #eab308;
+  --accent-bright: #fbbf24;
+  --accent-deep: #a16207;
+  --accent-rgb: 234,179,8;
+  --bg-primary: #08080a;
+  --bg-secondary: #0d0e12;
+  --card-bg: #12131a;
+  --card-border: rgba(234,179,8,0.12);
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif !important;
+  overflow-x: hidden;
+}
+
+.font-vazirmatn {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+.font-nrt-reg {
+  font-family: 'NRT Reg', 'Vazirmatn', sans-serif !important;
+}
+
+.font-nrt-bd1 {
+  font-family: 'NRT Bold 1', 'NRT-Bd1', 'Vazirmatn', sans-serif !important;
+}
+
+.font-nrt-bd2 {
+  font-family: 'NRT Bold 2', 'NRT-Bd2', 'Vazirmatn', sans-serif !important;
+}
+
+/* Premium Onyx/Charcoal dark theme with dynamic accent */
+.bg-fluid {
+  background: linear-gradient(135deg, #08080a 0%, #0d0e12 50%, #12131a 100%);
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -2;
+}
+
+/* Dynamic accent utility classes — map to CSS variables */
+.accent-text { color: var(--accent-bright); }
+.accent-bg { background-color: var(--accent-base); }
+.accent-border { border-color: var(--accent-base); }
+.accent-from { background: linear-gradient(to right, var(--accent-base), var(--accent-deep)); }
+.accent-glow { box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.35); }
+.accent-glow-lg { box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.3); }
+.accent-fill { fill: var(--accent-base); }
+
+/* Hide scrollbar for horizontal carousels */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Scrollbar uses dynamic accent */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+::-webkit-scrollbar-thumb { background: rgba(var(--accent-rgb), 0.5); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(var(--accent-rgb), 0.8); }
+
+::selection {
+  background: rgba(var(--accent-rgb), 0.35);
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-in {
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+/* Staggered card animation */
+.card-stagger {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* ── Shimmer skeleton animation ── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer-bg {
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ── Force-hide native video controls (we use a custom control bar) ── */
+video::-webkit-media-controls,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none !important;
+}
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+/* ── Native <track> cue styling: transparent background, NRT font, crisp outline ── */
+::cue {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-family: 'NRT Reg', 'Vazirmatn', sans-serif !important;
+  font-weight: 700;
+  font-size: 1.15em;
+  line-height: 1.5;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9) !important;
+}
+
+video::cue {
+  background-color: transparent !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9) !important;
+}
+
+/* ── Custom subtitle overlay ── */
+.subtitle-overlay {
+  direction: rtl;
+  text-align: center;
+  background-color: transparent !important;
+  font-family: 'NRT Reg', 'Vazirmatn', sans-serif !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9) !important;
+}

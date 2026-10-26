@@ -1,0 +1,26 @@
+[functions.proxy-video]
+verify_jwt = false
+
+[functions.stream-api]
+verify_jwt = false
+
+[functions.subtitle-file]
+verify_jwt = false
+
+[functions.subtitles-api]
+verify_jwt = false
+
+[functions.translate-synopsis]
+verify_jwt = false
+
+[functions.video-urls-api]
+verify_jwt = false
+
+[functions.gemini-translate]
+verify_jwt = false
+
+[functions.resolve-stream]
+verify_jwt = false
+
+[functions.translate-subtitle]
+verify_jwt = false
